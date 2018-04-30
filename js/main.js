@@ -30,15 +30,23 @@ var generate = {
                 result = e;
             };
         });
+        //generate the star size here
+        result.size = (randIntBetween(result.sizeMin*100,result.sizeMax*100)/100);
         return result;
     }
 };
 
-var handlers = {
-  
+var handlers = {  
+    addStar: function() {
+        starSystem.push(generate.star());        
+    },
     generateNewStarSystem: function(){
         starSystem = starSystemTemplate; //clears starSystem
-        var primaryStar = generate.star(); //generates a primary star
-        starSystem.push(primaryStar);
+        handlers.addStar(); //add the first star, which is the primary stars
+        var potentialNewStar = generate.star();
+        while (potentialNewStar.size < starSystem[starSystem.length - 1].size) {
+            starSystem.push(potentialNewStar);
+            potentialNewStar = generate.star();
+        };
     }  
   };
