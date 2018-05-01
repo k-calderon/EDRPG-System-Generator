@@ -60,3 +60,8 @@ var commonStar = [
         discoveryReward: 1500
     }
 ];
+var rareStar = [
+    {
+        
+    }
+];

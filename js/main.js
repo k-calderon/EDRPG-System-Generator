@@ -17,7 +17,6 @@ function randIntBetween(min, max) {
 
 //console.log(randIntBetween(1,5))
 
-var starSystemTemplate = []; //Do not modify starSystemTemplate in any way.
 var starSystem = []; //Initializing starSystem
 
 
@@ -41,7 +40,7 @@ var handlers = {
         starSystem.push(generate.star());        
     },
     generateNewStarSystem: function(){
-        starSystem = starSystemTemplate; //clears starSystem
+        starSystem = []; //clears starSystem
         handlers.addStar(); //add the first star, which is the primary stars
         var potentialNewStar = generate.star();
         while (potentialNewStar.size < starSystem[starSystem.length - 1].size) {
