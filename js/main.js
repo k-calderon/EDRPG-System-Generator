@@ -74,5 +74,23 @@ var handlers = {
             starSystem.push(potentialNewStar);
             potentialNewStar = generate.star();
         };
+        render.stars();
     }  
+  };
+
+  var render = {
+      stars: function(){
+            var targetDiv = document.querySelector('#target');
+            targetDiv.innerHTML = ''; //clears the target div. this is necessary 
+            starSystem.forEach(function(e, position){
+                const starHtml = '<div><h3><strong>'+ e.type +'</strong></h3>\
+                                        <p><strong>Size: </strong>'+ e.size +'</p>\
+                                        <p><strong>Appearance: </strong>'+ e.appearance +'</p>\
+                                    </div>';
+                var starDiv = document.createElement('div');
+                starDiv.innerHTML = starHtml;
+                starDiv.id = 'star'+ position;
+                targetDiv.appendChild(starDiv);
+            });
+      }
   };
