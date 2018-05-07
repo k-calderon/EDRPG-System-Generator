@@ -75,7 +75,20 @@ var handlers = {
             potentialNewStar = generate.star();
         };
         render.stars();
-    }  
+    },
+    generatePlanets: function() {        
+        starSystem.forEach(function(star){
+            star.planets = [];
+            var innerPlanetsRange = 1000
+            if (star.type === "A-Type Main Sequence" || star.type === "B-Type Main Sequence" || star.type === "O-Type Main Sequence") {
+                innerPlanetsRange = 2000;
+            };
+            for (var i = 100; i <= innerPlanetsRange; i += 100) {
+                //insert table rolls here
+                console.log(i);
+            };
+        });
+    }
   };
 
   var render = {
