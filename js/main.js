@@ -19,17 +19,23 @@ function d100() {
     return randIntBetween(1, 100)    
 };
 
-var starSystem = []; //Initializing starSystem
-
-
-var generate = {
-    star: function(overrideRoll) { //overrideRoll forces a certain d100() result instead of rolling the dice
-        var roll = 1; //initialize roll        
+function rollD100 (overrideRoll) {
+    var roll = 1; //initialize roll        
         if (overrideRoll >= 1 && overrideRoll <= 100){
             roll = overrideRoll;
         } else {
             roll = d100();
         };
+    return roll;
+};
+
+var starSystem = []; //Initializing starSystem
+
+
+var generate = {
+    
+    star: function(overrideRoll) { //overrideRoll forces a certain d100() result instead of rolling the dice
+        var roll = rollD100(overrideRoll);
         var result = {} //initialize result
         
         /*accepts a starType category and iterates through them to find the star type that matches the 
@@ -55,7 +61,11 @@ var generate = {
         //generate the star size here
         result.size = (randIntBetween(result.sizeMin*100,result.sizeMax*100)/100);
         return result;
+    },
+    planet: function(overrideRoll, starType) {
+        
     }
+
 };
 
 var handlers = {  
@@ -84,8 +94,10 @@ var handlers = {
                 innerPlanetsRange = 2000;
             };
             for (var i = 100; i <= innerPlanetsRange; i += 100) {
-                //insert table rolls here
-                console.log(i);
+                // switch (star.type) {
+                //     case "L-Type Brown Dwarf":
+                //         function d100();
+                // }
             };
         });
     }

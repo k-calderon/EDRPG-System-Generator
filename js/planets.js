@@ -436,3 +436,16 @@ var innerPlanet = {
         }
     ]
 };
+
+var outerPlanet = {
+    lType: [],
+    mType: [],
+    kType: [],
+    gType: [],
+    fType: [],
+    aType: [],
+    bType: [],
+    oType: [],
+    giant: [],
+    massive:[]
+};
