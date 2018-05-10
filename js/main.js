@@ -63,16 +63,9 @@ var generate = {
         return result;
     },
     planet: function(overrideRoll, starType) {
-        
-    }
-
-};
-
-var handlers = {  
-    addStar: function(overrideRoll) {
-        starSystem.push(generate.star(overrideRoll));        
-    },
-    generateNewStarSystem: function(overrideRoll){
+        // *** to do
+    },    
+    newStarSystem: function(overrideRoll){
         starSystem = []; //clears starSystem
         handlers.addStar(overrideRoll); //add the first star, which is the primary stars
         var potentialNewStar = generate.star(); //rolls a new star
@@ -84,38 +77,93 @@ var handlers = {
             starSystem.push(potentialNewStar);
             potentialNewStar = generate.star();
         };
+        generate.planets();
         render.stars();
+        render.planets();
     },
-    generatePlanets: function() {        
+    planets: function() {        
         starSystem.forEach(function(star){
             star.planets = [];
-            var innerPlanetsRange = 1000
+            var innerPlanetsRangeMax = 1000;
+            var outerPlanetsRangeMin = 1000;
+            var outerPlanetsRangeMax = 10000;
+            function planetTableRoll (table, overrideRoll) {
+                var roll = d100(overrideRoll);                
+                var result = [];
+                table.forEach(function(e){
+                    if ((e.rollRangeMin <= roll) && (e.rollRangeMax >= roll)){            
+                        result = e;
+                    };
+                });
+                return result;
+            };
             if (star.type === "A-Type Main Sequence" || star.type === "B-Type Main Sequence" || star.type === "O-Type Main Sequence") {
-                innerPlanetsRange = 2000;
+                innerPlanetsRangeMax = 2000;
+                outerPlanetsRangeMin = 3000;
+                outerPlanetsRangeMax = 20000;
             };
-            for (var i = 100; i <= innerPlanetsRange; i += 100) {
-                // switch (star.type) {
-                //     case "L-Type Brown Dwarf":
-                //         function d100();
-                // }
+            /* ***DRY up this section - begin */
+            //Generate inner planets
+            if (star.innerPlanetTable) { //checks to see if the star is elligible to roll on the inner planet table            
+                for (var i = 100; i <= innerPlanetsRangeMax; i += 100) {
+                    var planet = planetTableRoll(star.innerPlanetTable);
+                    planet.distance = i;
+                    star.planets.push(planet);                    
+                };
             };
+            //Generate outer planets
+            for (var i = outerPlanetsRangeMin; i <= outerPlanetsRangeMax; i += 1000) {
+                var planet = planetTableRoll(star.outerPlanetTable);
+                planet.distance = i;
+                star.planets.push(planet);                  
+            };
+            /* DRY up this section - end */
         });
     }
+
+};
+
+var handlers = {  
+    addStar: function(overrideRoll) {
+        starSystem.push(generate.star(overrideRoll));        
+    },
+    addPlanet: function(star) {
+        
+    }
+    
   };
 
   var render = {
-      stars: function(){
+        stars: function() {
             var targetDiv = document.querySelector('#target');
             targetDiv.innerHTML = ''; //clears the target div. this is necessary 
-            starSystem.forEach(function(e, position){
+            starSystem.forEach(function(e, position) {
                 const starHtml = '<div><h3><strong>'+ e.type +'</strong></h3>\
                                         <p><strong>Size: </strong>'+ e.size +'</p>\
                                         <p><strong>Appearance: </strong>'+ e.appearance +'</p>\
+                                        <p><strong>Planets: </strong>' + '<div id = "planets' + position + '"></div></p>\
                                     </div>';
                 var starDiv = document.createElement('div');
                 starDiv.innerHTML = starHtml;
                 starDiv.id = 'star'+ position;
                 targetDiv.appendChild(starDiv);
             });
-      }
+        },
+        planets: function() {
+            for (var i = 0; i < starSystem.length; i++){
+                var targetId = '#planets' + i;
+                var targetDiv = document.querySelector(targetId);
+                targetDiv.innerHTML = ''; //clears the target div. this is necessary 
+                starSystem[i].planets.forEach(function(e, position) {
+                    const planetHtml = '<div id = "planet"' + position + '>\
+                                            <p>' + e.type + '</p>\
+                                        </div>';
+                    var planetDiv = document.createElement('div');
+                    planetDiv.innerHTML = planetHtml;
+                    planetDiv.id = 'planet'+ position;
+                    targetDiv.appendChild(planetDiv);
+                });
+            }
+        
+        }
   };
