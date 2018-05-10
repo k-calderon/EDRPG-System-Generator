@@ -438,14 +438,355 @@ var innerPlanet = {
 };
 
 var outerPlanet = {
-    lType: [],
-    mType: [],
-    kType: [],
-    gType: [],
-    fType: [],
-    aType: [],
-    bType: [],
-    oType: [],
-    giant: [],
-    massive:[]
+    lType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 90
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 91,
+            rollRangeMax: 100
+        },
+    ],
+    mType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 85
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 86,
+            rollRangeMax: 98
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 99,
+            rollRangeMax: 100
+        }
+    ],
+    kType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 70
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 71,
+            rollRangeMax: 75
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 76,
+            rollRangeMax: 90
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 91,
+            rollRangeMax: 95
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 96,
+            rollRangeMax: 100
+        }
+    ],
+    gType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 70
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 71,
+            rollRangeMax: 75
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 76,
+            rollRangeMax: 90
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 91,
+            rollRangeMax: 95
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 96,
+            rollRangeMax: 100
+        }
+    ],
+    fType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 65
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 66,
+            rollRangeMax: 70
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 71,
+            rollRangeMax: 89
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 90,
+            rollRangeMax: 94
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 95,
+            rollRangeMax: 99
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 100,
+            rollRangeMax: 100
+        }
+    ],
+    aType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 45
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 46,
+            rollRangeMax: 50
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 51,
+            rollRangeMax: 75
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 76,
+            rollRangeMax: 80
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 81,
+            rollRangeMax: 85
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 86,
+            rollRangeMax: 100
+        }
+    ],
+    bType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 40
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 41,
+            rollRangeMax: 45
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 46,
+            rollRangeMax: 65
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 66,
+            rollRangeMax: 70
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 71,
+            rollRangeMax: 75
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 76,
+            rollRangeMax: 100
+        }
+    ],
+    oType: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 35
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 36,
+            rollRangeMax: 40
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 41,
+            rollRangeMax: 55
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 56,
+            rollRangeMax: 60
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 61,
+            rollRangeMax: 65
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 66,
+            rollRangeMax: 100
+        }
+    ],
+    giant: [
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 70
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 71,
+            rollRangeMax: 75
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 76,
+            rollRangeMax: 86
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 87,
+            rollRangeMax: 88
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 89,
+            rollRangeMax: 90
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 91,
+            rollRangeMax: 100
+        }
+    ],
+    massive:[
+        {
+            type: "No Planet",
+            discoveryReward: 0,
+            rollRangeMin: 1,
+            rollRangeMax: 30
+        },
+        {
+            type: "Ice World",
+            discoveryReward: 100,
+            rollRangeMin: 31,
+            rollRangeMax: 35
+        },
+        {
+            type: "Gas Giant",
+            discoveryReward: 700,
+            discoveryRewardRing: 1000,
+            rollRangeMin: 36,
+            rollRangeMax: 46
+        },
+        {
+            type: "Gas Giant with ammonia-based life",
+            discoveryReward: 2000,
+            discoveryRewardRing: 5000,
+            rollRangeMin: 47,
+            rollRangeMax: 48
+        },
+        {
+            type: "Gas Giant with water based life",
+            discoveryReward: 3000,
+            discoveryRewardRing: 6000,
+            rollRangeMin: 49,
+            rollRangeMax: 50
+        },
+        {
+            type: "Star",
+            discoveryReward: 0,            
+            rollRangeMin: 51,
+            rollRangeMax: 100
+        }
+    ]
 };
