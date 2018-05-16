@@ -3,24 +3,28 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 50
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 60
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 90
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 91,
             rollRangeMax: 100
         }        
@@ -29,36 +33,42 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 40
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 41,
             rollRangeMax: 50
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 60
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 65
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 85
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 86,
             rollRangeMax: 95
         },
@@ -66,6 +76,7 @@ var innerPlanet = {
             type: "Rocky",
             goldilocksType: "Water World",
             discoveryReward: 200,
+            gasGiant: false,
             goldilocksReward: 10000,
             rollRangeMin: 91,
             rollRangeMax: 100
@@ -74,6 +85,7 @@ var innerPlanet = {
             type: "High Metal Content",
             goldilocksType: "Earth-Like",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 20000,
             rollRangeMin: 91,
             rollRangeMax: 99
@@ -82,6 +94,7 @@ var innerPlanet = {
             type: "Metal Rich",
             goldilocksType: "Ammonia World",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 5000,
             rollRangeMin: 100,
             rollRangeMax: 100
@@ -91,36 +104,42 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 30
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 31,
             rollRangeMax: 40
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 41,
             rollRangeMax: 41
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 42,
             rollRangeMax: 50
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 75
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 76,
             rollRangeMax: 85
         },
@@ -128,6 +147,7 @@ var innerPlanet = {
             type: "Rocky",
             goldilocksType: "Water World",
             discoveryReward: 200,
+            gasGiant: false,
             goldilocksReward: 10000,
             rollRangeMin: 86,
             rollRangeMax: 95
@@ -136,6 +156,7 @@ var innerPlanet = {
             type: "High Metal Content",
             goldilocksType: "Earth-Like",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 20000,
             rollRangeMin: 96,
             rollRangeMax: 99
@@ -144,6 +165,7 @@ var innerPlanet = {
             type: "Metal Rich",
             goldilocksType: "Ammonia World",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 5000,
             rollRangeMin: 100,
             rollRangeMax: 100
@@ -153,36 +175,42 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 30
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 31,
             rollRangeMax: 40
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 41,
             rollRangeMax: 41
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 42,
             rollRangeMax: 50
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 60
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 80
         },
@@ -190,6 +218,7 @@ var innerPlanet = {
             type: "Rocky",
             goldilocksType: "Water World",
             discoveryReward: 200,
+            gasGiant: false,
             goldilocksReward: 10000,
             rollRangeMin: 81,
             rollRangeMax: 90
@@ -198,6 +227,7 @@ var innerPlanet = {
             type: "High Metal Content",
             goldilocksType: "Earth-Like",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 20000,
             rollRangeMin: 91,
             rollRangeMax: 99
@@ -206,6 +236,7 @@ var innerPlanet = {
             type: "Metal Rich",
             goldilocksType: "Ammonia World",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 5000,
             rollRangeMin: 100,
             rollRangeMax: 100
@@ -215,36 +246,42 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 40
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 41,
             rollRangeMax: 50
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 51
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 52,
             rollRangeMax: 60
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 70
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 85
         },
@@ -252,6 +289,7 @@ var innerPlanet = {
             type: "Rocky",
             goldilocksType: "Water World",
             discoveryReward: 200,
+            gasGiant: false,
             goldilocksReward: 10000,
             rollRangeMin: 86,
             rollRangeMax: 90
@@ -260,6 +298,7 @@ var innerPlanet = {
             type: "High Metal Content",
             goldilocksType: "Earth-Like",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 20000,
             rollRangeMin: 91,
             rollRangeMax: 95
@@ -268,6 +307,7 @@ var innerPlanet = {
             type: "Metal Rich",
             goldilocksType: "Ammonia World",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 5000,
             rollRangeMin: 96,
             rollRangeMax: 96
@@ -275,6 +315,7 @@ var innerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 97,
             rollRangeMax: 100
         }
@@ -283,36 +324,42 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 50
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 55
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 56,
             rollRangeMax: 60
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 65
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 70
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 90
         },
@@ -320,6 +367,7 @@ var innerPlanet = {
             type: "Rocky",
             goldilocksType: "Water World",
             discoveryReward: 200,
+            gasGiant: false,
             goldilocksReward: 10000,
             rollRangeMin: 91,
             rollRangeMax: 91
@@ -328,6 +376,7 @@ var innerPlanet = {
             type: "High Metal Content",
             goldilocksType: "Earth-Like",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 20000,
             rollRangeMin: 92,
             rollRangeMax: 92
@@ -336,6 +385,7 @@ var innerPlanet = {
             type: "Metal Rich",
             goldilocksType: "Ammonia World",
             discoveryReward: 700,
+            gasGiant: false,
             goldilocksReward: 5000,
             rollRangeMin: 93,
             rollRangeMax: 93
@@ -343,6 +393,7 @@ var innerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 94,
             rollRangeMax: 100
         }
@@ -351,42 +402,49 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 60
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 61,
             rollRangeMax: 65
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 70
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 75
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 76,
             rollRangeMax: 80
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 81,
             rollRangeMax: 90
         },        
         {
             type: "Star",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 91,
             rollRangeMax: 100
         }
@@ -395,42 +453,49 @@ var innerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 65
         },
         {
             type: "Asteroid Belt",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 70
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 75
         },
         {
             type: "Rocky",
             discoveryReward: 200,
+            gasGiant: false,
             rollRangeMin: 76,
             rollRangeMax: 80
         },
         {
             type: "High Metal Content",
             discoveryReward: 700,
+            gasGiant: false,
             rollRangeMin: 81,
             rollRangeMax: 85
         },
         {
             type: "Metal Rich",
             discoveryReward: 2000,
+            gasGiant: false,
             rollRangeMin: 86,
             rollRangeMax: 90
         },        
         {
             type: "Star",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 91,
             rollRangeMax: 100
         }
@@ -442,12 +507,14 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 90
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 91,
             rollRangeMax: 100
         },
@@ -456,18 +523,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 85
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 86,
             rollRangeMax: 98
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 99,
             rollRangeMax: 100
@@ -477,33 +547,38 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 70
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 75
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
-            discoveryRewardRing: 1000,
+            gasGiant: true,
+            discoveryRewardRing: 1000,            
             rollRangeMin: 76,
             rollRangeMax: 90
         },
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
-            discoveryRewardRing: 5000,
+            gasGiant: true,
+            discoveryRewardRing: 5000,            
             rollRangeMin: 91,
             rollRangeMax: 95
         },
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
-            discoveryRewardRing: 6000,
+            gasGiant: true,
+            discoveryRewardRing: 6000,            
             rollRangeMin: 96,
             rollRangeMax: 100
         }
@@ -512,18 +587,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 70
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 75
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 76,
             rollRangeMax: 90
@@ -531,6 +609,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 91,
             rollRangeMax: 95
@@ -538,6 +617,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 96,
             rollRangeMax: 100
@@ -547,18 +627,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 65
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 70
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 71,
             rollRangeMax: 89
@@ -566,6 +649,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 90,
             rollRangeMax: 94
@@ -573,6 +657,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 95,
             rollRangeMax: 99
@@ -580,6 +665,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 100,
             rollRangeMax: 100
         }
@@ -588,18 +674,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 45
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 46,
             rollRangeMax: 50
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 51,
             rollRangeMax: 75
@@ -607,6 +696,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 76,
             rollRangeMax: 80
@@ -614,6 +704,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 81,
             rollRangeMax: 85
@@ -621,6 +712,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 86,
             rollRangeMax: 100
         }
@@ -629,18 +721,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 40
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 41,
             rollRangeMax: 45
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 46,
             rollRangeMax: 65
@@ -648,6 +743,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 66,
             rollRangeMax: 70
@@ -655,6 +751,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 71,
             rollRangeMax: 75
@@ -662,6 +759,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 76,
             rollRangeMax: 100
         }
@@ -670,18 +768,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 35
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 36,
             rollRangeMax: 40
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 41,
             rollRangeMax: 55
@@ -689,6 +790,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 56,
             rollRangeMax: 60
@@ -696,6 +798,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 61,
             rollRangeMax: 65
@@ -703,6 +806,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 66,
             rollRangeMax: 100
         }
@@ -711,18 +815,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 70
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 71,
             rollRangeMax: 75
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 76,
             rollRangeMax: 86
@@ -730,6 +837,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 87,
             rollRangeMax: 88
@@ -737,6 +845,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 89,
             rollRangeMax: 90
@@ -744,6 +853,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 91,
             rollRangeMax: 100
         }
@@ -752,18 +862,21 @@ var outerPlanet = {
         {
             type: "No Planet",
             discoveryReward: 0,
+            gasGiant: false,
             rollRangeMin: 1,
             rollRangeMax: 30
         },
         {
             type: "Ice World",
             discoveryReward: 100,
+            gasGiant: false,
             rollRangeMin: 31,
             rollRangeMax: 35
         },
         {
             type: "Gas Giant",
             discoveryReward: 700,
+            gasGiant: true,
             discoveryRewardRing: 1000,
             rollRangeMin: 36,
             rollRangeMax: 46
@@ -771,6 +884,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with ammonia-based life",
             discoveryReward: 2000,
+            gasGiant: true,
             discoveryRewardRing: 5000,
             rollRangeMin: 47,
             rollRangeMax: 48
@@ -778,6 +892,7 @@ var outerPlanet = {
         {
             type: "Gas Giant with water based life",
             discoveryReward: 3000,
+            gasGiant: true,
             discoveryRewardRing: 6000,
             rollRangeMin: 49,
             rollRangeMax: 50
@@ -785,6 +900,7 @@ var outerPlanet = {
         {
             type: "Star",
             discoveryReward: 0,            
+            gasGiant: false,
             rollRangeMin: 51,
             rollRangeMax: 100
         }

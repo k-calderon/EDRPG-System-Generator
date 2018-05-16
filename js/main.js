@@ -18,6 +18,9 @@ function randIntBetween(min, max) {
 function d100() {
     return randIntBetween(1, 100)    
 };
+function d10() {
+    return randIntBetween(1, 10)    
+};
 
 function rollD100 (overrideRoll) {
     var roll = 1; //initialize roll        
@@ -29,11 +32,20 @@ function rollD100 (overrideRoll) {
     return roll;
 };
 
+function rollD10 (overrideRoll) {
+    var roll = 1; //initialize roll        
+        if (overrideRoll >= 1 && overrideRoll <= 10){
+            roll = overrideRoll;
+        } else {
+            roll = d10();
+        };
+    return roll;
+};
+
 var starSystem = []; //Initializing starSystem
 
 
-var generate = {
-    
+var generate = {    
     star: function(overrideRoll) { //overrideRoll forces a certain d100() result instead of rolling the dice
         var roll = rollD100(overrideRoll);
         var result = {} //initialize result
@@ -64,7 +76,16 @@ var generate = {
     },
     planet: function(overrideRoll, starType) {
         // *** to do
-    },    
+    },
+    moon: function(roll) {
+        var result = {};
+        moonType.forEach(function(e){
+            if (e.rollRangeMin <= roll && e.rollRangeMax >= roll) {
+                result = e;
+            };
+        });    
+        return result;
+    },
     newStarSystem: function(overrideRoll){
         starSystem = []; //clears starSystem
         handlers.addStar(overrideRoll); //add the first star, which is the primary stars
@@ -78,6 +99,7 @@ var generate = {
             potentialNewStar = generate.star();
         };
         generate.planets();
+        //generate.moons();
         render.stars();
         render.planets();
     },
@@ -118,6 +140,36 @@ var generate = {
                 star.planets.push(planet);                  
             };
             /* DRY up this section - end */
+        });
+    },
+    //****fix this #### */
+    moons: function() {
+        starSystem.forEach(function(e) {
+            e.planets.forEach(function(p){
+                if (p.type !== 'No Planet' && p.type !== 'Asteroid Belt' && p.type !== 'Star'){
+                    p.moons = [];
+                    p.numMoons = 0;
+                    var roll1 = rollD10();
+                    moons.forEach(function(f) {
+                        if (roll1 <= f.rollRangeMin && f.rollRangMax) {
+                            if (p.gasGiant === false) {
+                                p.numMoons = f.planet;
+                            } else {
+                                p.numMoons = f.gasGiant
+                            };
+                        };
+                    });
+                    for (var i = 0; i <= p.numMoons; i++){
+                        console.log('generating a moon');
+                        var roll2 = rollD10();
+                        var generatedMoon = generate.moon(roll2);
+                        p.moons.push(generatedMoon);
+                    };
+                };
+            });
+            
+            
+            
         });
     }
 
