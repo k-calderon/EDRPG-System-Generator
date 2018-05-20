@@ -6,7 +6,7 @@ function randIntBetween(min, max) {
         var tempMin = max;
         max = min;
         min = tempMin;
-    }
+    };
     /*return a random number between the min and max. The min 
     and the max do not have to start with 1*/
     return Math.floor(Math.random()*(max-min+1)+min);
@@ -152,7 +152,6 @@ var generate = {
             });            
         });
     }
-
 };
 var handlers = {  
     addStar: function(overrideRoll) {
@@ -192,6 +191,6 @@ var render = {
                 planetDiv.id = 'planet'+ position;
                 targetDiv.appendChild(planetDiv);
             });
-        }        
+        };
     }
 };
