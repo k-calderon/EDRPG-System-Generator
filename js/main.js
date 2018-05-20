@@ -35,8 +35,7 @@ var starSystem = []; //Initializing starSystem
 var generate = {    
     star: function(overrideRoll) { //overrideRoll forces a certain d100() result instead of rolling the dice
         var roll = rollD100(overrideRoll);
-        var result = {} //initialize result
-        
+        var result = {} //initialize result        
         /*accepts a starType category and iterates through them to find the star type that matches the 
         specified d100() roll range, then returns that star type as result */
         var pickStar = function(starType) {
@@ -44,8 +43,7 @@ var generate = {
                 if ((e.rollRangeMin <= roll) && (e.rollRangeMax >= roll)){            
                     result = e;
                 };
-            });
-            
+            });            
         };
         if(roll <= 98) {
             pickStar(commonStar);
@@ -55,8 +53,7 @@ var generate = {
         } else {
             var roll = d100();
             pickStar(specialStar);
-        };
-        
+        };        
         //generate the star size here
         result.size = (randIntBetween(result.sizeMin*100,result.sizeMax*100)/100);
         return result;
@@ -152,10 +149,7 @@ var generate = {
                         p.moons.push(generatedMoon);
                     };
                 };
-            });
-            
-            
-            
+            });            
         });
     }
 
@@ -165,42 +159,39 @@ var handlers = {
         starSystem.push(generate.star(overrideRoll));        
     },
     addPlanet: function(star) {
-        
-    }
-    
+        //to do
+    }    
   };
-
-  var render = {
-        stars: function() {
-            var targetDiv = document.querySelector('#target');
+var render = {
+    stars: function() {
+        var targetDiv = document.querySelector('#target');
+        targetDiv.innerHTML = ''; //clears the target div. this is necessary 
+        starSystem.forEach(function(e, position) {
+            const starHtml = '<div><h3><strong>'+ e.type +'</strong></h3>\
+                                    <p><strong>Size: </strong>'+ e.size +'</p>\
+                                    <p><strong>Appearance: </strong>'+ e.appearance +'</p>\
+                                    <p><strong>Planets: </strong>' + '<div id = "planets' + position + '"></div></p>\
+                                </div>';
+            var starDiv = document.createElement('div');
+            starDiv.innerHTML = starHtml;
+            starDiv.id = 'star'+ position;
+            targetDiv.appendChild(starDiv);
+        });
+    },
+    planets: function() {
+        for (var i = 0; i < starSystem.length; i++){
+            var targetId = '#planets' + i;
+            var targetDiv = document.querySelector(targetId);
             targetDiv.innerHTML = ''; //clears the target div. this is necessary 
-            starSystem.forEach(function(e, position) {
-                const starHtml = '<div><h3><strong>'+ e.type +'</strong></h3>\
-                                        <p><strong>Size: </strong>'+ e.size +'</p>\
-                                        <p><strong>Appearance: </strong>'+ e.appearance +'</p>\
-                                        <p><strong>Planets: </strong>' + '<div id = "planets' + position + '"></div></p>\
+            starSystem[i].planets.forEach(function(e, position) {
+                const planetHtml = '<div id = "planet"' + position + '>\
+                                        <p>' + e.type + '</p>\
                                     </div>';
-                var starDiv = document.createElement('div');
-                starDiv.innerHTML = starHtml;
-                starDiv.id = 'star'+ position;
-                targetDiv.appendChild(starDiv);
+                var planetDiv = document.createElement('div');
+                planetDiv.innerHTML = planetHtml;
+                planetDiv.id = 'planet'+ position;
+                targetDiv.appendChild(planetDiv);
             });
-        },
-        planets: function() {
-            for (var i = 0; i < starSystem.length; i++){
-                var targetId = '#planets' + i;
-                var targetDiv = document.querySelector(targetId);
-                targetDiv.innerHTML = ''; //clears the target div. this is necessary 
-                starSystem[i].planets.forEach(function(e, position) {
-                    const planetHtml = '<div id = "planet"' + position + '>\
-                                            <p>' + e.type + '</p>\
-                                        </div>';
-                    var planetDiv = document.createElement('div');
-                    planetDiv.innerHTML = planetHtml;
-                    planetDiv.id = 'planet'+ position;
-                    targetDiv.appendChild(planetDiv);
-                });
-            }
-        
-        }
-  };
+        }        
+    }
+};
