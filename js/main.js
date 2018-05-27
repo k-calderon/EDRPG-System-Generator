@@ -58,8 +58,21 @@ var generate = {
         result.size = (randIntBetween(result.sizeMin*100,result.sizeMax*100)/100);
         return result;
     },
-    planet: function(overrideRoll, starType) {
+    planet: function(overrideRoll, pTable) {
         // *** to do
+        var planetTableRoll = function (overrideRoll, pTable) {
+            var roll = rollD100(overrideRoll);                
+            var result = [];
+            pTable.forEach(function(e){
+                if ((e.rollRangeMin <= roll) && (e.rollRangeMax >= roll)){            
+                    result = e;
+                };
+            });
+            return result;
+        };
+        if (overrideRoll) {
+            return planetTableRoll(overrideRoll, pTable)
+        };
     },
     moon: function(roll) {
         var result = {};
