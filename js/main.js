@@ -58,6 +58,7 @@ var generate = {
         result.size = (randIntBetween(result.sizeMin*100,result.sizeMax*100)/100);
         return result;
     },
+    // pTable must be in this format: [inner planet|outer planet].[star type]
     planet: function(pTable, overrideRoll) {
             var roll = rollD100(overrideRoll);                
             var result = [];
